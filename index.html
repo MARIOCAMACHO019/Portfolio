@@ -3,260 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Profesional | Mario Camacho Prieto - Especialista ASIR</title>
+    <title>Mario Camacho | SysAdmin & Ciberseguridad</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="JS.js"></script>
 </head>
 <body>
+    <video autoplay muted loop id="bg-video">
+        <source src="background.mp4" type="video/mp4">
+        </video>
+    <div class="video-overlay"></div>
+
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
 
-    <nav class="floating-nav">
+    <nav class="glass-nav">
+        <div class="logo">MCP_<span>SYSTEMS</span></div>
         <ul>
-            <li><a href="#inicio" data-hover="Inicio"><i class="fas fa-home"></i></a></li>
-            <li><a href="#sobre-mi" data-hover="Sobre mí"><i class="fas fa-user"></i></a></li>
-            <li><a href="#habilidades" data-hover="Habilidades"><i class="fas fa-code"></i></a></li>
-            <li><a href="#proyectos" data-hover="Proyectos"><i class="fas fa-project-diagram"></i></a></li>
-            <li><a href="#contacto" data-hover="Contacto"><i class="fas fa-envelope"></i></a></li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#formacion">Formación</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#habilidades">Skills</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
 
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <h1 class="glitch" data-text="Mario Camacho Prieto">Mario Camacho Prieto</h1>
-            <h2 class="typewriter">Técnico Superior en Administración de Sistemas Informáticos en&nbsp;Red</h2>
-            <div class="hero-buttons">
-                <a href="#proyectos" class="btn btn-hover">Explorar Proyectos</a>
-                <a href="#contacto" class="btn btn-outline">Contactar Ahora</a>
+            <div class="cyber-box">
+                <p class="subtitle">ESTADO DEL SISTEMA: ONLINE</p>
+                <h1 class="glitch" data-text="MARIO CAMACHO">MARIO CAMACHO</h1>
+                <h2 class="role-text">ADMINISTRADOR DE SISTEMAS & <span class="highlight">CIBERSEGURIDAD</span></h2>
+                <p class="hero-desc">Transformando infraestructuras críticas y asegurando el futuro digital.</p>
+                <div class="hero-btns">
+                    <a href="#proyectos" class="btn cybr-btn">
+                        Ver Proyectos <span aria-hidden>_</span>
+                        <span aria-hidden class="cybr-btn__glitch">Proyectos_</span>
+                    </a>
+                    <a href="#contacto" class="btn btn-outline">Iniciar Conexión</a>
+                </div>
             </div>
         </div>
-        <div class="particles" id="particles-js"></div>
     </section>
 
-    <section id="sobre-mi" class="section">
+    <section id="formacion" class="section">
         <div class="container">
-            <h2 class="section-title">Sobre <span>Mí</span></h2>
-            <div class="about-container">
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="yo.png" alt="Foto de perfil de Mario Camacho Prieto" class="profile-img">
-                        </div>
-                        <div class="card-back">
-                            <h3>Detalles Clave</h3>
-                            <ul>
-                                <li><strong>Nombre:</strong> Mario Camacho Prieto</li>
-                                <li><strong>Especialidad:</strong> Administración de Sistemas y Redes</li>
-                                <li><strong>Experiencia:</strong> 2 semanas de prácticas en Mercanza (Marzo 2025)</li>
-                                <li><strong>Certificaciones:</strong> Máster en Ciberseguridad, Certificación Microsoft Azure</li>
-                            </ul>
-                        </div>
+            <h2 class="section-title" data-text="FORMACIÓN ACADÉMICA">FORMACIÓN <span>ACADÉMICA</span></h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content glass-card">
+                        <div class="date">2024 - Actualidad</div>
+                        <h3>Máster en Ciberseguridad</h3>
+                        <h4>ThePower Education</h4>
+                        <p>Especialización avanzada en seguridad ofensiva y defensiva, análisis de vulnerabilidades y hardening de infraestructuras críticas. Mi ambición es convertirme en un referente en la protección de datos corporativos a gran escala.</p>
                     </div>
                 </div>
-                <div class="about-text">
-                    <p>Soy Mario Camacho Prieto, una persona entusiasta y proactiva a punto de finalizar mi Grado Superior en Administración de Sistemas Informáticos en Red. Poseo sólidos conocimientos en la administración de redes, demostrando habilidad en el manejo de herramientas especializadas para su configuración y monitorización. Mi formación me ha familiarizado con lenguajes de marcas como HTML, CSS, JavaScript, JSON, XML y DOM, y tengo un dominio práctico de los sistemas operativos Windows y Linux.</p>
-                    <p>Cuento con experiencia en la resolución de incidencias en entornos de red, la creación, mantenimiento y actualización de bases de datos, así como en la instalación y configuración de sistemas operativos en ambas plataformas. Destaco por mi capacidad para trabajar bajo presión, mi sólida habilidad para el trabajo en equipo y una comunicación efectiva que facilita la colaboración y la consecución de objetivos.</p>
-                    <p>Además de mi perfil técnico, soy un deportista apasionado por el baloncesto. Mi participación en grandes campeonatos ha forjado en mí una mentalidad seria, competitiva y disciplinada, valores que aplico en cada aspecto de mi vida profesional y personal.</p>
-                    <div class="tech-stack">
-                        <div class="tech-item" data-tooltip="Windows Server">
-                            <i class="fab fa-windows"></i>
-                        </div>
-                        <div class="tech-item" data-tooltip="Linux">
-                            <i class="fab fa-linux"></i>
-                        </div>
-                        <div class="tech-item" data-tooltip="Redes Cisco">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
-                        <div class="tech-item" data-tooltip="Azure">
-                            <i class="fab fa-microsoft"></i>
-                        </div>
-                        <div class="tech-item" data-tooltip="Seguridad">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div class="tech-item" data-tooltip="HTML5">
-                            <i class="fab fa-html5"></i>
-                        </div>
-                        <div class="tech-item" data-tooltip="CSS3">
-                            <i class="fab fa-css3-alt"></i>
-                        </div>
-                        <div class="tech-item" data-tooltip="JavaScript">
-                            <i class="fab fa-js-square"></i>
-                        </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content glass-card">
+                        <div class="date">2024 - Actualidad</div>
+                        <h3>Grado Superior ASIR</h3>
+                        <h4>ThePower Education (Caja Mágica)</h4>
+                        <p>Formación intensiva en Administración de Sistemas Informáticos en Red. Despliegue de servicios, virtualización y gestión de redes complejas.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content glass-card">
+                        <div class="date">2022 - 2024</div>
+                        <h3>Bachillerato Tecnológico</h3>
+                        <h4>IES Gonzalo Chacón (Arroyomolinos)</h4>
+                        <p>Base sólida en ciencias y tecnología, desarrollando pensamiento lógico y resolución de problemas matemáticos y físicos aplicados.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="habilidades" class="section dark-section">
+    <section id="experiencia" class="section">
         <div class="container">
-            <h2 class="section-title">Mis <span>Habilidades</span></h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3><i class="fas fa-server"></i> Administración de Sistemas</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-level="95">
-                            <span>Windows Server (AD, GPO, DNS, DHCP)</span>
+            <h2 class="section-title" data-text="EXPERIENCIA LABORAL">EXPERIENCIA <span>LABORAL</span></h2>
+            <div class="experience-grid">
+                
+                <div class="exp-card glass-card">
+                    <div class="exp-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Técnico de Redes (Prácticas)</h3>
+                    <h4>Mercanza</h4>
+                    <span class="exp-date">Marzo 2025</span>
+                    <p>Inmersión total en el departamento de IT. Gestión de incidencias de red, monitorización de tráfico y soporte en la infraestructura de servidores de la empresa. Experiencia real en entorno corporativo de alto rendimiento.</p>
+                </div>
+
+                <div class="exp-card glass-card">
+                    <div class="exp-icon"><i class="fas fa-life-ring"></i></div>
+                    <h3>Socorrista Acuático</h3>
+                    <h4>Suarez y Moreno S.L.</h4>
+                    <span class="exp-date">Verano 2024 & 2025 (Junio-Septiembre)</span>
+                    <p>Aunque no es IT, este rol forjó mi disciplina, capacidad de reacción ante emergencias y toma de decisiones bajo presión extrema. Habilidades transferibles directamente a la gestión de crisis en ciberseguridad.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="habilidades" class="section">
+        <div class="container">
+            <h2 class="section-title" data-text="ARSENAL TÉCNICO">ARSENAL <span>TÉCNICO</span></h2>
+            
+            <div class="skills-wrapper">
+                <div class="skills-col">
+                    <h3 class="skill-header"><i class="fas fa-microchip"></i> HARD SKILLS</h3>
+                    <div class="skill-box glass-card">
+                        <div class="skill-item">
+                            <span>Windows Server & AD</span>
+                            <div class="bar"><div class="fill" style="width:95%"></div></div>
                         </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-level="85">
-                            <span>Linux (Ubuntu, CentOS, Scripting Bash)</span>
+                        <div class="skill-item">
+                            <span>Linux (Debian/RedHat)</span>
+                            <div class="bar"><div class="fill" style="width:85%"></div></div>
                         </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-level="90">
-                            <span>Virtualización (Hyper-V, VMware)</span>
+                        <div class="skill-item">
+                            <span>Ciberseguridad & Hacking Ético</span>
+                            <div class="bar"><div class="fill" style="width:80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Virtualización (VMware/Hyper-V)</span>
+                            <div class="bar"><div class="fill" style="width:90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Redes Cisco (CCNA Concepts)</span>
+                            <div class="bar"><div class="fill" style="width:85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Azure & Cloud</span>
+                            <div class="bar"><div class="fill" style="width:75%"></div></div>
                         </div>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3><i class="fas fa-network-wired"></i> Redes y Comunicaciones</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-level="90">
-                            <span>TCP/IP, DNS, DHCP</span>
+                <div class="skills-col">
+                    <h3 class="skill-header"><i class="fas fa-brain"></i> SOFT SKILLS</h3>
+                    <div class="soft-skills-grid">
+                        <div class="soft-item glass-card">
+                            <i class="fas fa-users"></i>
+                            <span>Trabajo en Equipo</span>
                         </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-level="85">
-                            <span>Routing & Switching</span>
+                        <div class="soft-item glass-card">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Resolución de Crisis</span>
                         </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-level="80">
-                            <span>VLANs, VPNs</span>
+                        <div class="soft-item glass-card">
+                            <i class="fas fa-rocket"></i>
+                            <span>Proactividad</span>
                         </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-shield-alt"></i> Seguridad Informática</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-level="88">
-                            <span>Firewalls (pfSense, Fortinet)</span>
+                        <div class="soft-item glass-card">
+                            <i class="fas fa-comments"></i>
+                            <span>Comunicación Efectiva</span>
                         </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-level="75">
-                            <span>Auditorías de Seguridad</span>
+                        <div class="soft-item glass-card">
+                            <i class="fas fa-stopwatch"></i>
+                            <span>Gestión del Tiempo</span>
                         </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-level="82">
-                            <span>Hardening de Sistemas</span>
+                        <div class="soft-item glass-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Aprendizaje Continuo</span>
                         </div>
                     </div>
                 </div>
             </div>
-
-            </div>
+        </div>
     </section>
 
     <section id="proyectos" class="section">
         <div class="container">
-            <h2 class="section-title">Proyectos <span>Destacados</span></h2>
+            <h2 class="section-title" data-text="PROYECTOS DESTACADOS">PROYECTOS <span>DESTACADOS</span></h2>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="azure.png" alt="Proyecto 1">
-                        <div class="project-overlay">
-                            <h3>Migración a Azure</h3>
-                            <p>Migración completa de infraestructura local a la nube</p>
-                            <a href="#" class="btn btn-small">Ver Detalles</a>
-                        </div>
-                    </div>
-                    <div class="project-tech">
-                        <span>Azure</span>
-                        <span>PowerShell</span>
-                        <span>Networking</span>
+                
+                <div class="project-card glass-card">
+                    <div class="card-content">
+                        <h3>Infraestructura Azure</h3>
+                        <p>Migración y despliegue Cloud.</p>
+                        <button class="btn-small open-modal" data-modal="modal1">Ver Detalles</button>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="active_directory.png" alt="Proyecto 2">
-                        <div class="project-overlay">
-                            <h3>Implementación AD</h3>
-                            <p>Despliegue de dominio Windows con políticas de grupo</p>
-                            <a href="#" class="btn btn-small">Ver Detalles</a>
-                        </div>
-                    </div>
-                    <div class="project-tech">
-                        <span>Windows Server</span>
-                        <span>Active Directory</span>
-                        <span>GPO</span>
+                <div class="project-card glass-card">
+                    <div class="card-content">
+                        <h3>Dominio Corporativo</h3>
+                        <p>Windows Server + Active Directory.</p>
+                        <button class="btn-small open-modal" data-modal="modal2">Ver Detalles</button>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="mongo.png" alt="Proyecto 3">
-                        <div class="project-overlay">
-                            <h3>Gestión de Bases de Datos</h3>
-                            <p>Desarrollo y administración de bases de datos relacionales y NoSQL.</p>
-                            <a href="#" class="btn btn-small">Ver Detalles</a>
-                        </div>
-                    </div>
-                    <div class="project-tech">
-                        <span>MySQL Workbench</span>
-                        <span>PhPMyAdmin</span>
-                        <span>MongoDB</span>
+                <div class="project-card glass-card">
+                    <div class="card-content">
+                        <h3>Cluster de Bases de Datos</h3>
+                        <p>Alta disponibilidad con MySQL y MongoDB.</p>
+                        <button class="btn-small open-modal" data-modal="modal3">Ver Detalles</button>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section id="contacto" class="section dark-section">
+    <div id="modal1" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal">&times;</span>
+            <h2>Migración a Microsoft Azure</h2>
+            <img src="azure.png" alt="Azure Project" class="modal-img">
+            <p><strong>Descripción:</strong> Este proyecto consistió en la migración completa de una infraestructura local (On-Premise) a la nube de Microsoft Azure.</p>
+            <ul>
+                <li>Configuración de Virtual Networks (VNet).</li>
+                <li>Implementación de Azure Active Directory Sync.</li>
+                <li>Creación de políticas de seguridad NSG (Network Security Groups).</li>
+                <li>Automatización mediante PowerShell.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal">&times;</span>
+            <h2>Implementación Active Directory</h2>
+            <img src="active_directory.png" alt="AD Project" class="modal-img">
+            <p><strong>Descripción:</strong> Despliegue desde cero de un entorno de dominio para una empresa ficticia de 500 empleados.</p>
+            <ul>
+                <li>Diseño de estructura de Unidades Organizativas (OU).</li>
+                <li>GPOs avanzadas para seguridad y mapeo de unidades.</li>
+                <li>Servidor DNS y DHCP con conmutación por error.</li>
+                <li>Roaming Profiles y Redirección de Carpetas.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal">&times;</span>
+            <h2>Gestión Híbrida de Datos</h2>
+            <img src="mongo.png" alt="DB Project" class="modal-img">
+            <p><strong>Descripción:</strong> Desarrollo de un sistema backend capaz de gestionar datos relacionales y no relacionales simultáneamente.</p>
+            <ul>
+                <li>Cluster de MongoDB para Big Data.</li>
+                <li>MySQL Workbench para datos transaccionales.</li>
+                <li>Optimización de consultas y seguridad de acceso.</li>
+            </ul>
+        </div>
+    </div>
+
+    <section id="contacto" class="section">
         <div class="container">
-            <h2 class="section-title">Contacto</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Información de Contacto</h3>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>mario.camacho.linkedin@gmail.com</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+34 667 96 30 08</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Madrid, España</span>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/mario-camacho-prieto-117021368" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/MARIOCAMACHO019" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.instagram.com/camacho_019/" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" required>
-                            <label for="name">Nombre</label>
-                            <div class="underline"></div>
+            <div class="contact-box glass-card">
+                <h2 class="section-title">INICIAR <span>COMUNICACIÓN</span></h2>
+                <div class="contact-flex">
+                    <div class="contact-details">
+                        <div class="c-item"><i class="fas fa-envelope"></i> mario.camacho.linkedin@gmail.com</div>
+                        <div class="c-item"><i class="fas fa-phone"></i> +34 667 96 30 08</div>
+                        <div class="c-item"><i class="fas fa-map-marker-alt"></i> Madrid, España</div>
+                        <div class="socials">
+                            <a href="https://www.linkedin.com/in/mario-camacho-prieto-117021368" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/MARIOCAMACHO019" target="_blank"><i class="fab fa-github"></i></a>
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="email" required>
-                            <label for="email">Email</label>
-                            <div class="underline"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" required>
-                            <label for="subject">Asunto</label>
-                            <div class="underline"></div>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" required></textarea>
-                            <label for="message">Mensaje</label>
-                            <div class="underline"></div>
-                        </div>
-                        <button type="submit" class="btn btn-hover">Enviar Mensaje</button>
+                    </div>
+                    <form class="c-form">
+                        <input type="text" placeholder="Identificación (Nombre)" required>
+                        <input type="email" placeholder="Frecuencia (Email)" required>
+                        <textarea placeholder="Mensaje encriptado..." rows="5" required></textarea>
+                        <button type="submit" class="btn btn-hover">TRANSMITIR</button>
                     </form>
                 </div>
             </div>
@@ -264,27 +275,9 @@
     </section>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span>Mario Camacho Prieto</span>
-                    <span>Técnico Superior ASIR</span>
-                </div>
-                <div class="footer-links">
-                    <a href="#inicio">Inicio</a>
-                    <a href="#sobre-mi">Sobre mí</a>
-                    <a href="#habilidades">Habilidades</a>
-                    <a href="#proyectos">Proyectos</a>
-                    <a href="#contacto">Contacto</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Mario Camacho Prieto. Todos los derechos reservados.</p>
-            </div>
-        </div>
+        <p>SYSTEM.ROOT.USER: MARIO CAMACHO // 2025</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
