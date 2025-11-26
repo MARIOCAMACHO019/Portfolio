@@ -158,8 +158,9 @@ body {
 /* =========================================
    5. COMPONENTES GLOBALES (TÍTULOS Y TARJETAS)
    ========================================= */
+/* CAMBIO: REDUCIDO EL PADDING PARA MENOS ESPACIO ENTRE SECCIONES */
 .section {
-    padding: 100px 0;
+    padding: 50px 0; /* Antes era 100px 0 */
     position: relative;
 }
 
@@ -174,7 +175,7 @@ body {
     font-family: var(--font-tech);
     font-size: 3rem;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     position: relative;
     text-transform: uppercase;
     text-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
@@ -362,7 +363,7 @@ body {
 .timeline {
     position: relative;
     max-width: 1000px;
-    margin: 40px auto;
+    margin: 20px auto;
 }
 
 /* Línea central */
