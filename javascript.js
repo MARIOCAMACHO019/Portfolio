@@ -1,32 +1,76 @@
+/* =========================================
+   1. LÓGICA DE MODALES (GLOBAL)
+   Estas funciones deben estar SUELTAS para que
+   el HTML las encuentre al hacer click.
+   ========================================= */
+
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden"; // Bloquea el scroll de la página
+    } else {
+        console.error("No se encontró el modal con ID:", modalId);
+    }
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto"; // Reactiva el scroll
+    }
+}
+
+// Cerrar si se hace clic fuera de la ventana (en el fondo oscuro)
+window.onclick = function(event) {
+    if (event.target.classList.contains('project-modal')) {
+        event.target.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+}
+
+// Cerrar pulsando la tecla ESC
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+        const modals = document.querySelectorAll('.project-modal');
+        modals.forEach(modal => {
+            modal.style.display = "none";
+        });
+        document.body.style.overflow = "auto";
+    }
+});
+
+/* =========================================
+   2. LÓGICA QUE ESPERA A QUE CARGUE LA PÁGINA
+   (Cursor y Scroll Suave)
+   ========================================= */
+
 document.addEventListener('DOMContentLoaded', () => {
     
-    /* =========================================
-       1. LÓGICA DEL CURSOR PERSONALIZADO
-       ========================================= */
+    // --- CURSOR PERSONALIZADO ---
     const cursor = document.querySelector('.cursor');
     const follower = document.querySelector('.cursor-follower');
 
-    // Mueve el cursor y el seguidor
     if (cursor && follower) {
         document.addEventListener('mousemove', (e) => {
-            // Posición exacta del punto central
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
             
-            // Pequeño retraso para el círculo grande (efecto fluido)
+            // Retraso para efecto fluido
             setTimeout(() => {
                 follower.style.left = e.clientX + 'px';
                 follower.style.top = e.clientY + 'px';
             }, 80);
         });
 
-        // Efecto hover sobre enlaces y botones
+        // Efecto hover (agrandar) en enlaces y botones
         const interactiveElements = document.querySelectorAll('a, button, .tech-item, .close-btn');
         
         interactiveElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
                 cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
-                cursor.style.backgroundColor = '#bc13fe'; // Cambia a rosa
+                cursor.style.backgroundColor = '#bc13fe'; // Rosa neón
                 follower.style.width = '50px';
                 follower.style.height = '50px';
                 follower.style.borderColor = '#bc13fe';
@@ -34,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             el.addEventListener('mouseleave', () => {
                 cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-                cursor.style.backgroundColor = '#00f3ff'; // Vuelve a azul cian
+                cursor.style.backgroundColor = '#00f3ff'; // Azul neón
                 follower.style.width = '30px';
                 follower.style.height = '30px';
                 follower.style.borderColor = '#00f3ff';
@@ -42,9 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* =========================================
-       2. EFECTO SMOOTH SCROLL PARA NAVEGACIÓN
-       ========================================= */
+    // --- SMOOTH SCROLL (Navegación suave) ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -58,45 +100,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-});
-
-/* =========================================
-   3. FUNCIONES DE MODALES (GLOBALES)
-   ========================================= */
-
-// Función para abrir un modal específico
-function openModal(modalId) {
-    const modal = document.getElementById(modalId);
-    if (modal) {
-        modal.style.display = "block";
-        document.body.style.overflow = "hidden"; // Bloquea el scroll del fondo
-    }
-}
-
-// Función para cerrar un modal específico
-function closeModal(modalId) {
-    const modal = document.getElementById(modalId);
-    if (modal) {
-        modal.style.display = "none";
-        document.body.style.overflow = "auto"; // Reactiva el scroll
-    }
-}
-
-// Cerrar modal si se hace clic fuera del contenido (en el fondo oscuro)
-window.onclick = function(event) {
-    if (event.target.classList.contains('project-modal')) {
-        event.target.style.display = "none";
-        document.body.style.overflow = "auto";
-    }
-}
-
-// Tecla ESC para cerrar cualquier modal abierto
-document.addEventListener('keydown', function(event) {
-    if (event.key === "Escape") {
-        const modals = document.querySelectorAll('.project-modal');
-        modals.forEach(modal => {
-            modal.style.display = "none";
-        });
-        document.body.style.overflow = "auto";
-    }
 });
