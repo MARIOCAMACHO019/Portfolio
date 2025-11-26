@@ -158,10 +158,14 @@ body {
 /* =========================================
    5. COMPONENTES GLOBALES (TÍTULOS Y TARJETAS)
    ========================================= */
-/* CAMBIO: REDUCIDO EL PADDING PARA MENOS ESPACIO ENTRE SECCIONES */
 .section {
-    padding: 50px 0; /* Antes era 100px 0 */
+    padding: 50px 0; /* Espaciado reducido entre secciones */
     position: relative;
+}
+
+/* Clase para eliminar el espacio superior en Formación */
+.reduced-top-padding {
+    padding-top: 0 !important;
 }
 
 .container {
@@ -204,13 +208,13 @@ body {
    6. SECCIÓN HERO (INICIO)
    ========================================= */
 .hero {
-    height: 100vh;
+    min-height: 90vh; /* Permite que la siguiente sección suba un poco */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
-    padding: 0 20px;
+    padding: 120px 20px 50px 20px; /* Ajuste para no chocar con el menú */
 }
 
 .cyber-box {
@@ -219,46 +223,40 @@ body {
     max-width: 1100px;
 }
 
-/* Efecto Glitch para el nombre */
-.glitch {
+/* NUEVO EFECTO DE TEXTO (HOLO-TEXT) - Sin cortes, estilo moderno */
+.holo-text {
     font-family: var(--font-tech);
     font-size: 4.5rem;
     font-weight: 900;
     color: #fff;
-    position: relative;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     margin-bottom: 10px;
-    text-shadow: 2px 2px var(--neon-pink);
-    animation: glitch-skew 3s infinite linear alternate-reverse;
+    /* Animación de resplandor y vibración sutil */
+    animation: holo-glow 3s infinite alternate;
 }
 
-.glitch::before, .glitch::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-.glitch::before {
-    left: 2px;
-    text-shadow: -2px 0 var(--neon-pink);
-    clip: rect(44px, 450px, 56px, 0);
-    animation: glitch-anim 5s infinite linear alternate-reverse;
-}
-.glitch::after {
-    left: -2px;
-    text-shadow: -2px 0 var(--neon-blue);
-    clip: rect(44px, 450px, 56px, 0);
-    animation: glitch-anim2 5s infinite linear alternate-reverse;
-}
-
-@keyframes glitch-skew {
-    0% { transform: skew(0deg); }
-    10% { transform: skew(-2deg); }
-    20% { transform: skew(2deg); }
-    30% { transform: skew(0deg); }
+@keyframes holo-glow {
+    0% {
+        text-shadow: 2px 2px 0px rgba(188, 19, 254, 0.7), -2px -2px 0px rgba(0, 243, 255, 0.7);
+        transform: skew(0deg);
+    }
+    20% {
+        text-shadow: 2px 2px 0px rgba(188, 19, 254, 0.7), -2px -2px 0px rgba(0, 243, 255, 0.7);
+        transform: skew(0deg);
+    }
+    21% {
+        text-shadow: -2px 2px 0px rgba(188, 19, 254, 0.7), 2px -2px 0px rgba(0, 243, 255, 0.7);
+        transform: skew(-0.5deg);
+    }
+    22% {
+        text-shadow: 2px 2px 0px rgba(188, 19, 254, 0.7), -2px -2px 0px rgba(0, 243, 255, 0.7);
+        transform: skew(0deg);
+    }
+    100% {
+        text-shadow: 2px 2px 5px rgba(188, 19, 254, 0.9), -2px -2px 5px rgba(0, 243, 255, 0.9);
+        transform: skew(0deg);
+    }
 }
 
 .role-text {
@@ -460,13 +458,18 @@ body {
     text-shadow: 0 0 15px var(--neon-blue);
 }
 
+/* Bloque para separar título y fecha */
+.date-block {
+    margin: 10px 0 15px;
+}
+
 .exp-date {
     display: block;
     color: var(--neon-pink);
     font-family: var(--font-tech);
     font-size: 0.9rem;
-    margin: 10px 0 15px;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
 /* =========================================
@@ -802,7 +805,7 @@ footer {
    13. RESPONSIVIDAD (MÓVILES Y TABLETS)
    ========================================= */
 @media (max-width: 992px) {
-    .glitch { font-size: 3.5rem; }
+    .holo-text { font-size: 3.5rem; }
     .hero-btns { flex-direction: column; align-items: center; gap: 20px; }
 }
 
@@ -812,7 +815,7 @@ footer {
     .glass-nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
     
     /* Hero */
-    .glitch { font-size: 2.5rem; }
+    .holo-text { font-size: 2.5rem; }
     .role-text { font-size: 1.1rem; }
     
     /* Timeline */
