@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle Proyecto | Active Directory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .detail-section { padding-top: 150px; min-height: 100vh; padding-bottom: 50px; }
+        .detail-container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        
+        .back-btn { 
+            display: inline-flex; 
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px; 
+            color: var(--neon-blue); 
+            text-decoration: none; 
+            font-family: var(--font-tech); 
+            font-size: 1.1rem; 
+            transition: 0.3s; 
+            padding: 10px 20px;
+            border: 1px solid var(--neon-blue);
+            background: rgba(0, 243, 255, 0.05);
+        }
+        .back-btn:hover { 
+            background: var(--neon-blue); 
+            color: black;
+            box-shadow: 0 0 15px var(--neon-blue);
+        }
+
+        .detail-img { 
+            width: 100%; 
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px; 
+            border: 1px solid var(--text-dim); 
+            margin-bottom: 40px; 
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.1); 
+        }
+
+        .detail-content h1 { 
+            font-size: 2.5rem; 
+            color: white; 
+            margin-bottom: 10px; 
+            font-family: var(--font-tech); 
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(0,243,255,0.3);
+        }
+
+        .subtitle-project {
+            color: var(--neon-pink);
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            display: block;
+            letter-spacing: 1px;
+        }
+
+        .detail-content h3 {
+            color: var(--neon-blue);
+            font-family: var(--font-tech);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        .detail-content p { 
+            color: #cbd5e1; 
+            font-size: 1.1rem; 
+            line-height: 1.8; 
+            margin-bottom: 15px; 
+            text-align: justify;
+        }
+
+        .tech-list { list-style: none; padding: 0; }
+        .tech-list li { 
+            padding-left: 20px; 
+            position: relative; 
+            margin-bottom: 15px; 
+            background: rgba(255,255,255,0.03); 
+            padding: 15px 20px; 
+            border-left: 3px solid var(--neon-pink);
+            color: #e6f1ff;
+        }
+        .tech-list strong { color: var(--neon-blue); }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="bg-video"><source src="background.mp4" type="video/mp4"></video>
+    <div class="video-overlay"></div>
+    <div class="cursor"></div><div class="cursor-follower"></div>
+
+    <nav class="glass-nav">
+        <div class="logo">MARIO <span>CAMACHO</span></div>
+        <ul>
+            <li><a href="index.html">Volver al Inicio</a></li>
+        </ul>
+    </nav>
+
+    <section class="detail-section">
+        <div class="detail-container">
+            <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> VOLVER A PROYECTOS</a>
+
+            <div class="glass-card">
+                <h1>DESPLIEGUE CORPORATIVO WINDOWS SERVER</h1>
+                <span class="subtitle-project">ADMINISTRACIÓN DE SISTEMAS & DIRECTORIO ACTIVO</span>
+                
+                <img src="active_directory.png" alt="Detalle Active Directory" class="detail-img">
+
+                <div class="detail-content">
+                    <h3><i class="fas fa-terminal"></i> Descripción del Proyecto</h3>
+                    <p>Lideré la implementación completa de un dominio de <strong>Active Directory (AD DS)</strong> para una empresa ficticia de 200 empleados con múltiples departamentos. El desafío principal consistía en diseñar una estructura lógica, segura y escalable desde cero, utilizando <strong>Windows Server 2022</strong> como base del sistema operativo.</p>
+                    <p>El proyecto simulaba un entorno de producción real donde la continuidad del negocio era crítica, por lo que se implementaron medidas de redundancia en todos los servicios esenciales de la red.</p>
+
+                    <h3><i class="fas fa-cogs"></i> Implementación Técnica (Nivel Avanzado)</h3>
+                    <ul class="tech-list">
+                        <li><strong>Controladores de Dominio:</strong> Instalación y promoción de dos controladores de dominio (DC) configurados en alta disponibilidad (Primario y Secundario) para asegurar la replicación y evitar puntos únicos de fallo.</li>
+                        <li><strong>Estructura Lógica (OU):</strong> Diseño granular de Unidades Organizativas separando usuarios, equipos y servidores por departamento, facilitando la delegación de administración.</li>
+                        <li><strong>Servicios de Red Críticos:</strong>
+                            <br> • <strong>DNS:</strong> Configuración de zonas de búsqueda directa e inversa y reenviadores condicionales.
+                            <br> • <strong>DHCP:</strong> Implementación de ámbito con <em>Failover</em> (conmutación por error) para garantizar la asignación de IPs ininterrumpida.
+                        </li>
+                        <li><strong>Políticas de Grupo (GPO):</strong> Despliegue masivo de configuraciones de seguridad (bloqueo de USB, complejidad de contraseñas) y mapeo automático de unidades de red compartidas según el perfil del usuario.</li>
+                        <li><strong>Automatización:</strong> Creación de scripts en <strong>PowerShell</strong> para la importación masiva de usuarios desde archivos CSV, asignándoles automáticamente grupos y permisos.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer><p>Mario Camacho Prieto // 2025</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
