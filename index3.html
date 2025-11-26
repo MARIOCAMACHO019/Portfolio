@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle Proyecto | Bases de Datos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .detail-section { padding-top: 150px; min-height: 100vh; padding-bottom: 50px; }
+        .detail-container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        
+        .back-btn { 
+            display: inline-flex; 
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px; 
+            color: var(--neon-blue); 
+            text-decoration: none; 
+            font-family: var(--font-tech); 
+            font-size: 1.1rem; 
+            transition: 0.3s; 
+            padding: 10px 20px;
+            border: 1px solid var(--neon-blue);
+            background: rgba(0, 243, 255, 0.05);
+        }
+        .back-btn:hover { 
+            background: var(--neon-blue); 
+            color: black;
+            box-shadow: 0 0 15px var(--neon-blue);
+        }
+
+        .detail-img { 
+            width: 100%; 
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px; 
+            border: 1px solid var(--text-dim); 
+            margin-bottom: 40px; 
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.1); 
+        }
+
+        .detail-content h1 { 
+            font-size: 2.5rem; 
+            color: white; 
+            margin-bottom: 10px; 
+            font-family: var(--font-tech); 
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(0,243,255,0.3);
+        }
+
+        .subtitle-project {
+            color: var(--neon-pink);
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            display: block;
+            letter-spacing: 1px;
+        }
+
+        .detail-content h3 {
+            color: var(--neon-blue);
+            font-family: var(--font-tech);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        .detail-content p { 
+            color: #cbd5e1; 
+            font-size: 1.1rem; 
+            line-height: 1.8; 
+            margin-bottom: 15px; 
+            text-align: justify;
+        }
+
+        .tech-list { list-style: none; padding: 0; }
+        .tech-list li { 
+            padding-left: 20px; 
+            position: relative; 
+            margin-bottom: 15px; 
+            background: rgba(255,255,255,0.03); 
+            padding: 15px 20px; 
+            border-left: 3px solid var(--neon-pink);
+            color: #e6f1ff;
+        }
+        .tech-list strong { color: var(--neon-blue); }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="bg-video"><source src="background.mp4" type="video/mp4"></video>
+    <div class="video-overlay"></div>
+    <div class="cursor"></div><div class="cursor-follower"></div>
+
+    <nav class="glass-nav">
+        <div class="logo">MARIO <span>CAMACHO</span></div>
+        <ul>
+            <li><a href="index.html">Volver al Inicio</a></li>
+        </ul>
+    </nav>
+
+    <section class="detail-section">
+        <div class="detail-container">
+            <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> VOLVER A PROYECTOS</a>
+
+            <div class="glass-card">
+                <h1>GESTIÓN Y OPTIMIZACIÓN DE BBDD</h1>
+                <span class="subtitle-project">ADMINISTRACIÓN SQL & OPTIMIZACIÓN DE CONSULTAS</span>
+                
+                <img src="mongo.png" alt="Detalle Bases de Datos" class="detail-img">
+
+                <div class="detail-content">
+                    <h3><i class="fas fa-terminal"></i> Descripción del Proyecto</h3>
+                    <p>Desarrollé y optimicé el backend de datos para un sistema ERP de gestión de inventario masivo. Mi trabajo se centró en el diseño de un esquema relacional eficiente utilizando <strong>MySQL Workbench</strong>, priorizando la integridad de los datos y la velocidad de respuesta en consultas complejas.</p>
+                    <p>El objetivo era transformar una base de datos desestructurada en un sistema robusto capaz de soportar alta concurrencia y generar reportes en tiempo real sin degradar el rendimiento.</p>
+
+                    <h3><i class="fas fa-cogs"></i> Implementación Técnica (Nivel Avanzado)</h3>
+                    <ul class="tech-list">
+                        <li><strong>Modelado de Datos:</strong> Realicé la normalización de la base de datos hasta la <strong>3ª Forma Normal (3NF)</strong> para eliminar redundancias y asegurar la integridad referencial.</li>
+                        <li><strong>Programación SQL Avanzada:</strong> 
+                            <br> • <strong>Triggers:</strong> Implementación de disparadores para auditar cambios en tablas sensibles (histórico de precios y modificaciones de stock).
+                            <br> • <strong>Stored Procedures:</strong> Desarrollo de procedimientos almacenados para automatizar tareas recurrentes como el cierre de caja mensual y reportes de ventas.
+                        </li>
+                        <li><strong>Optimización de Rendimiento:</strong> Análisis de planes de ejecución (Query Execution Plans) para detectar cuellos de botella. Implementé índices estratégicos (B-Tree) que redujeron el tiempo de respuesta de las consultas más pesadas en un 70%.</li>
+                        <li><strong>Seguridad y Mantenimiento:</strong> Configuración de un sistema de copias de seguridad (Backups) lógicas automatizadas mediante <code>mysqldump</code> y tareas programadas (Cron Jobs) en entorno Linux.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer><p>Mario Camacho Prieto // 2025</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
