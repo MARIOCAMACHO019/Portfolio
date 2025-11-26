@@ -1,45 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     /* =========================================
-       1. LÓGICA DE VENTANAS MODALES (POP-UPS)
-       ========================================= */
-    const modalBtns = document.querySelectorAll('.open-modal');
-    const closeBtns = document.querySelectorAll('.close-modal');
-    const modals = document.querySelectorAll('.modal');
-
-    // Función para abrir el modal
-    modalBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault(); // Evita el salto de página
-            const modalId = btn.getAttribute('data-modal');
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.style.display = 'block';
-                document.body.style.overflow = 'hidden'; // Bloquea el scroll de fondo
-            }
-        });
-    });
-
-    // Función para cerrar el modal con la X
-    closeBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            modals.forEach(modal => {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto'; // Restaura el scroll
-            });
-        });
-    });
-
-    // Función para cerrar el modal haciendo clic fuera de la caja
-    window.addEventListener('click', (e) => {
-        if (e.target.classList.contains('modal')) {
-            e.target.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-    });
-
-    /* =========================================
-       2. LÓGICA DEL CURSOR PERSONALIZADO
+       1. LÓGICA DEL CURSOR PERSONALIZADO
        ========================================= */
     const cursor = document.querySelector('.cursor');
     const follower = document.querySelector('.cursor-follower');
@@ -59,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Efecto hover sobre enlaces y botones
-        const interactiveElements = document.querySelectorAll('a, button, .tech-item');
+        const interactiveElements = document.querySelectorAll('a, button, .tech-item, .close-btn');
         
         interactiveElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
@@ -81,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* =========================================
-       3. EFECTO SMOOTH SCROLL PARA NAVEGACIÓN
+       2. EFECTO SMOOTH SCROLL PARA NAVEGACIÓN
        ========================================= */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -96,4 +58,45 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+});
+
+/* =========================================
+   3. FUNCIONES DE MODALES (GLOBALES)
+   ========================================= */
+
+// Función para abrir un modal específico
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden"; // Bloquea el scroll del fondo
+    }
+}
+
+// Función para cerrar un modal específico
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto"; // Reactiva el scroll
+    }
+}
+
+// Cerrar modal si se hace clic fuera del contenido (en el fondo oscuro)
+window.onclick = function(event) {
+    if (event.target.classList.contains('project-modal')) {
+        event.target.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+}
+
+// Tecla ESC para cerrar cualquier modal abierto
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+        const modals = document.querySelectorAll('.project-modal');
+        modals.forEach(modal => {
+            modal.style.display = "none";
+        });
+        document.body.style.overflow = "auto";
+    }
 });
