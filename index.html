@@ -33,7 +33,6 @@
         <div class="hero-content">
             <div class="cyber-box">
                 <h1 class="gradient-text">MARIO CAMACHO PRIETO</h1>
-                
                 <h2 class="role-text">ADMINISTRADOR DE SISTEMAS INFORMÁTICOS EN RED <span class="highlight">& CIBERSEGURIDAD</span></h2>
                 
                 <div class="hero-btns">
@@ -211,7 +210,7 @@
                     <div class="card-content">
                         <h3>Infraestructura Azure</h3>
                         <p>Migración y despliegue Cloud.</p>
-                        <button class="btn-details open-modal" data-modal="modal1">Ver Detalles</button>
+                        <button class="btn-details" onclick="openModal('modal-azure')">VER DETALLES</button>
                     </div>
                 </div>
 
@@ -222,7 +221,7 @@
                     <div class="card-content">
                         <h3>Implementación AD</h3>
                         <p>Windows Server + Active Directory.</p>
-                        <button class="btn-details open-modal" data-modal="modal2">Ver Detalles</button>
+                        <button class="btn-details" onclick="openModal('modal-ad')">VER DETALLES</button>
                     </div>
                 </div>
 
@@ -233,7 +232,7 @@
                     <div class="card-content">
                         <h3>Gestión de BBDD</h3>
                         <p>Administración y Optimización SQL.</p>
-                        <button class="btn-details open-modal" data-modal="modal3">Ver Detalles</button>
+                        <button class="btn-details" onclick="openModal('modal-db')">VER DETALLES</button>
                     </div>
                 </div>
 
@@ -241,50 +240,96 @@
         </div>
     </section>
 
-    <div id="modal1" class="modal">
+    <div id="modal-azure" class="project-modal">
         <div class="modal-content glass-card">
-            <span class="close-modal">&times;</span>
-            <h2>Migración de Infraestructura a Azure</h2>
-            <div class="modal-body">
-                <p>En este proyecto personal de nivel avanzado, asumí el reto de modernizar una infraestructura heredada (on-premise) simulada, migrando servicios críticos a la nube de Microsoft Azure. Mi objetivo principal fue garantizar la alta disponibilidad y la seguridad desde el diseño inicial de la arquitectura.</p>
-                <br>
-                <p>Diseñé e implementé una arquitectura de red Hub-and-Spoke, estableciendo Peering entre VNets para segmentar el tráfico de gestión del tráfico de producción. Configuré Azure Active Directory (Entra ID) sincronizándolo con un dominio local mediante Azure AD Connect para permitir una identidad híbrida, facilitando el Single Sign-On (SSO) para los usuarios.</p>
-                <br>
-                <p>Para el almacenamiento, desplegué cuentas con redundancia geográfica (GRS) y políticas de ciclo de vida. Además, automaticé el despliegue de máquinas virtuales utilizando scripts de PowerShell y plantillas ARM, asegurando que cada VM cumpliera con las normativas de seguridad mediante Network Security Groups (NSG) altamente restrictivos.</p>
-                <br>
-                <p><strong>Tecnologías aplicadas:</strong> Azure VNet, NSG, Azure AD Connect, PowerShell, Blob Storage.</p>
+            <span class="close-btn" onclick="closeModal('modal-azure')">&times;</span>
+            <h2 class="modal-title">Infraestructura Híbrida en Microsoft Azure</h2>
+            <div class="modal-grid">
+                <div class="modal-left">
+                    <img src="azure.png" alt="Arquitectura Azure" class="modal-main-img">
+                    <div class="tech-tags">
+                        <span>Azure VNet</span>
+                        <span>VPN Gateway</span>
+                        <span>NSG</span>
+                        <span>Azure AD</span>
+                        <span>Ubuntu Server</span>
+                    </div>
+                </div>
+                <div class="modal-right">
+                    <h3><i class="fas fa-terminal"></i> Ficha Técnica</h3>
+                    <p><strong>Objetivo:</strong> Migración de servicios críticos on-premise a la nube mediante estrategia <em>Lift-and-Shift</em> y despliegue de arquitectura de alta disponibilidad.</p>
+                    
+                    <h3><i class="fas fa-cogs"></i> Implementación Técnica</h3>
+                    <ul class="tech-list">
+                        <li><strong>Redes Virtuales (VNet):</strong> Segmentación de tráfico mediante subredes y configuración de <em>VNet Peering</em>.</li>
+                        <li><strong>Seguridad:</strong> Implementación de <em>Network Security Groups (NSG)</em> con reglas de entrada/salida restrictivas.</li>
+                        <li><strong>Conectividad:</strong> Despliegue de <em>VPN Gateway</em> (Route-based) para túnel Site-to-Site.</li>
+                        <li><strong>Identidad:</strong> Configuración de <em>Azure Active Directory</em> y gestión de RBAC.</li>
+                        <li><strong>Almacenamiento:</strong> Uso de <em>Blob Storage</em> con redundancia LRS para backups.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 
-    <div id="modal2" class="modal">
+    <div id="modal-ad" class="project-modal">
         <div class="modal-content glass-card">
-            <span class="close-modal">&times;</span>
-            <h2>Despliegue Corporativo con Windows Server</h2>
-            <div class="modal-body">
-                <p>Lideré la implementación completa de un dominio de Active Directory para una empresa ficticia de 200 empleados con múltiples departamentos. El desafío consistía en crear una estructura lógica, segura y escalable desde cero utilizando Windows Server 2022.</p>
-                <br>
-                <p>Estructuré el directorio mediante una jerarquía de Unidades Organizativas (OU) granular. Implementé un esquema robusto de GPOs (Políticas de Grupo) para aplicar configuraciones de seguridad masivas: bloqueo de puertos USB, políticas de contraseñas complejas, despliegue de software automático y mapeo de unidades de red compartidas según el departamento.</p>
-                <br>
-                <p>Además, configuré los servicios de red esenciales: un servidor DNS con zonas directas e inversas y un servidor DHCP con ámbito tolerante a fallos (Failover) para garantizar que la red nunca perdiera conectividad ni asignación de IPs, incluso ante la caída de un controlador de dominio.</p>
-                <br>
-                <p><strong>Tecnologías aplicadas:</strong> Windows Server 2022, AD DS, DNS, DHCP Failover, Group Policy Management.</p>
+            <span class="close-btn" onclick="closeModal('modal-ad')">&times;</span>
+            <h2 class="modal-title">Despliegue Corporativo Windows Server</h2>
+            <div class="modal-grid">
+                <div class="modal-left">
+                    <img src="active_directory.png" alt="Esquema Active Directory" class="modal-main-img">
+                    <div class="tech-tags">
+                        <span>Windows Server 2022</span>
+                        <span>DNS/DHCP</span>
+                        <span>GPO Avanzadas</span>
+                        <span>PowerShell</span>
+                        <span>Roaming Profiles</span>
+                    </div>
+                </div>
+                <div class="modal-right">
+                    <h3><i class="fas fa-terminal"></i> Ficha Técnica</h3>
+                    <p><strong>Objetivo:</strong> Diseño e implementación de un dominio corporativo escalable para una organización de 200 usuarios.</p>
+                    
+                    <h3><i class="fas fa-cogs"></i> Implementación Técnica</h3>
+                    <ul class="tech-list">
+                        <li><strong>Controladores de Dominio:</strong> AD DS con redundancia (DC Primario y Secundario).</li>
+                        <li><strong>Servicios de Red:</strong> DNS con zonas directas/inversas y DHCP con <em>Failover</em>.</li>
+                        <li><strong>Políticas de Grupo (GPOs):</strong> Bloqueo de USBs, políticas de contraseñas y mapeo de unidades.</li>
+                        <li><strong>Estructura Lógica:</strong> Automatización de usuarios masiva mediante scripts de <strong>PowerShell</strong>.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 
-    <div id="modal3" class="modal">
+    <div id="modal-db" class="project-modal">
         <div class="modal-content glass-card">
-            <span class="close-modal">&times;</span>
-            <h2>Gestión y Optimización de BBDD Relacionales</h2>
-            <div class="modal-body">
-                <p>Desarrollé y optimicé el backend de datos para un sistema de gestión de inventario. Mi trabajo se centró en el diseño de un esquema relacional eficiente en MySQL, priorizando la integridad de los datos y la velocidad de respuesta en consultas complejas.</p>
-                <br>
-                <p>Realicé la normalización de la base de datos hasta la tercera forma normal (3NF) para eliminar redundancias. Escribí procedimientos almacenados (Stored Procedures) y Triggers para automatizar tareas de mantenimiento y auditoría de cambios en los datos sensibles, asegurando que ninguna modificación pasara desapercibida.</p>
-                <br>
-                <p>Para mejorar el rendimiento, analicé los planes de ejecución de las queries más lentas e implementé índices estratégicos que redujeron significativamente el tiempo de respuesta. También configuré un sistema de copias de seguridad (Backups) automatizadas para asegurar la recuperación ante desastres.</p>
-                <br>
-                <p><strong>Tecnologías aplicadas:</strong> MySQL Workbench, SQL Avanzado, Procedimientos Almacenados, Optimización de Índices.</p>
+            <span class="close-btn" onclick="closeModal('modal-db')">&times;</span>
+            <h2 class="modal-title">Administración de BBDD Relacionales</h2>
+            <div class="modal-grid">
+                <div class="modal-left">
+                    <img src="mongo.png" alt="Esquema BBDD" class="modal-main-img">
+                    <div class="tech-tags">
+                        <span>MySQL / MariaDB</span>
+                        <span>SQL Avanzado</span>
+                        <span>Procedimientos</span>
+                        <span>Triggers</span>
+                        <span>Optimización</span>
+                    </div>
+                </div>
+                <div class="modal-right">
+                    <h3><i class="fas fa-terminal"></i> Ficha Técnica</h3>
+                    <p><strong>Objetivo:</strong> Diseño y normalización del backend de datos para un sistema ERP de gestión de inventario.</p>
+                    
+                    <h3><i class="fas fa-cogs"></i> Implementación Técnica</h3>
+                    <ul class="tech-list">
+                        <li><strong>Modelo:</strong> Normalización hasta la <strong>3ª Forma Normal (3NF)</strong>.</li>
+                        <li><strong>Programación SQL:</strong> Triggers para auditoría y Stored Procedures para reportes.</li>
+                        <li><strong>Optimización:</strong> Creación de <strong>Índices B-Tree</strong> en columnas de búsqueda frecuente.</li>
+                        <li><strong>Mantenimiento:</strong> Backups automatizados con <code>mysqldump</code> y cron jobs.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
