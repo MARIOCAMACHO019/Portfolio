@@ -7,7 +7,7 @@
     --neon-pink: #bc13fe;
     --dark-bg: #050505;
     
-    /* Variables para Glassmorphism */
+    /* Variables para Glassmorphism (Cristal) */
     --glass-bg: rgba(10, 25, 47, 0.75);
     --glass-border: rgba(0, 243, 255, 0.2);
     
@@ -33,11 +33,11 @@ body {
     font-family: var(--font-body);
     color: var(--text-main);
     background-color: var(--dark-bg);
-    overflow-x: hidden; /* Evita scroll horizontal */
+    overflow-x: hidden; /* Evita scroll horizontal no deseado */
     line-height: 1.6;
 }
 
-/* Scrollbar personalizada futurista */
+/* Scrollbar personalizada */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -63,17 +63,17 @@ body {
     min-height: 100%;
     z-index: -2; /* Detrás de todo */
     object-fit: cover;
-    filter: brightness(0.4) contrast(1.1); /* Oscurecido para que se lea el texto */
+    filter: brightness(0.4) contrast(1.1);
 }
 
-/* Malla/Grid sobre el video para efecto tecnológico */
+/* Malla/Grid sobre el video */
 .video-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at center, transparent 0%, #000 90%); /* Viñeta */
+    background: radial-gradient(circle at center, transparent 0%, #000 90%);
     z-index: -1;
     pointer-events: none;
     background-size: 4px 4px;
@@ -119,7 +119,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(2, 12, 27, 0.85); /* Fondo semitransparente oscuro */
+    background: rgba(2, 12, 27, 0.85);
     backdrop-filter: blur(10px);
     z-index: 1000;
     border-bottom: 1px solid rgba(0, 243, 255, 0.1);
@@ -156,14 +156,13 @@ body {
 }
 
 /* =========================================
-   5. COMPONENTES GLOBALES (TÍTULOS Y TARJETAS)
+   5. COMPONENTES GLOBALES
    ========================================= */
 .section {
-    padding: 50px 0; /* Espaciado reducido */
+    padding: 50px 0;
     position: relative;
 }
 
-/* Clase para eliminar el espacio superior en Formación */
 .reduced-top-padding {
     padding-top: 0 !important;
 }
@@ -174,7 +173,6 @@ body {
     margin: 0 auto;
 }
 
-/* Títulos de sección */
 .section-title {
     font-family: var(--font-tech);
     font-size: 3rem;
@@ -186,11 +184,9 @@ body {
 }
 .section-title span { color: var(--neon-blue); }
 
-/* Tarjetas con efecto cristal (Glassmorphism) */
 .glass-card {
     background: var(--glass-bg);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border);
     border-radius: 12px;
     padding: 30px;
@@ -223,7 +219,7 @@ body {
     max-width: 1100px;
 }
 
-/* EFECTO DE NOMBRE: Gradient Text Moderno */
+/* Texto Gradiente para el Nombre */
 .gradient-text {
     font-family: var(--font-tech);
     font-size: 5rem;
@@ -250,18 +246,16 @@ body {
     font-size: 1.4rem;
     margin: 20px 0 50px;
     letter-spacing: 2px;
-    font-weight: 400;
 }
 .highlight { color: var(--neon-blue); font-weight: 700; }
 
-/* --- Botones Hero --- */
 .hero-btns {
     display: flex;
     gap: 30px;
     justify-content: center;
 }
 
-/* Botón Neón Animado */
+/* Botones Neón */
 .btn-neon {
     position: relative;
     display: inline-block;
@@ -276,51 +270,22 @@ body {
     transition: 0.5s;
     border: 1px solid transparent;
 }
-
 .btn-neon:hover {
     background: var(--neon-blue);
     color: #050801;
-    box-shadow: 0 0 5px var(--neon-blue),
-                0 0 25px var(--neon-blue),
-                0 0 50px var(--neon-blue),
-                0 0 100px var(--neon-blue);
+    box-shadow: 0 0 5px var(--neon-blue), 0 0 25px var(--neon-blue), 0 0 50px var(--neon-blue), 0 0 100px var(--neon-blue);
 }
-
-.btn-neon span {
-    position: absolute;
-    display: block;
-}
-
-.btn-neon span:nth-child(1) {
-    top: 0; left: -100%; width: 100%; height: 2px;
-    background: linear-gradient(90deg, transparent, var(--neon-blue));
-    animation: btn-anim1 1s linear infinite;
-}
-.btn-neon span:nth-child(2) {
-    top: -100%; right: 0; width: 2px; height: 100%;
-    background: linear-gradient(180deg, transparent, var(--neon-blue));
-    animation: btn-anim2 1s linear infinite;
-    animation-delay: .25s;
-}
-.btn-neon span:nth-child(3) {
-    bottom: 0; right: -100%; width: 100%; height: 2px;
-    background: linear-gradient(270deg, transparent, var(--neon-blue));
-    animation: btn-anim3 1s linear infinite;
-    animation-delay: .5s;
-}
-.btn-neon span:nth-child(4) {
-    bottom: -100%; left: 0; width: 2px; height: 100%;
-    background: linear-gradient(360deg, transparent, var(--neon-blue));
-    animation: btn-anim4 1s linear infinite;
-    animation-delay: .75s;
-}
+.btn-neon span { position: absolute; display: block; }
+.btn-neon span:nth-child(1) { top: 0; left: -100%; width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--neon-blue)); animation: btn-anim1 1s linear infinite; }
+.btn-neon span:nth-child(2) { top: -100%; right: 0; width: 2px; height: 100%; background: linear-gradient(180deg, transparent, var(--neon-blue)); animation: btn-anim2 1s linear infinite; animation-delay: .25s; }
+.btn-neon span:nth-child(3) { bottom: 0; right: -100%; width: 100%; height: 2px; background: linear-gradient(270deg, transparent, var(--neon-blue)); animation: btn-anim3 1s linear infinite; animation-delay: .5s; }
+.btn-neon span:nth-child(4) { bottom: -100%; left: 0; width: 2px; height: 100%; background: linear-gradient(360deg, transparent, var(--neon-blue)); animation: btn-anim4 1s linear infinite; animation-delay: .75s; }
 
 @keyframes btn-anim1 { 0% { left: -100%; } 50%, 100% { left: 100%; } }
 @keyframes btn-anim2 { 0% { top: -100%; } 50%, 100% { top: 100%; } }
 @keyframes btn-anim3 { 0% { right: -100%; } 50%, 100% { right: 100%; } }
 @keyframes btn-anim4 { 0% { bottom: -100%; } 50%, 100% { bottom: 100%; } }
 
-/* Botón Glass Secundario */
 .btn-glass {
     padding: 15px 40px;
     color: white;
@@ -333,267 +298,65 @@ body {
     letter-spacing: 2px;
     font-weight: bold;
 }
-
-.btn-glass:hover {
-    background: white;
-    color: black;
-    border-color: white;
-}
+.btn-glass:hover { background: white; color: black; border-color: white; }
 
 /* =========================================
-   7. SECCIÓN FORMACIÓN (TIMELINE)
+   7. TIMELINE (FORMACIÓN)
    ========================================= */
-.timeline {
-    position: relative;
-    max-width: 1000px;
-    margin: 20px auto;
-}
-
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    background: var(--neon-blue);
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -1px;
-    box-shadow: 0 0 10px var(--neon-blue);
-}
-
-.timeline-item {
-    padding: 10px 40px;
-    position: relative;
-    width: 50%;
-    box-sizing: border-box;
-}
-
+.timeline { position: relative; max-width: 1000px; margin: 20px auto; }
+.timeline::after { content: ''; position: absolute; width: 2px; background: var(--neon-blue); top: 0; bottom: 0; left: 50%; margin-left: -1px; box-shadow: 0 0 10px var(--neon-blue); }
+.timeline-item { padding: 10px 40px; position: relative; width: 50%; }
 .left { left: 0; text-align: right; }
 .right { left: 50%; text-align: left; }
-
-.left::after, .right::after {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    right: -8px;
-    background: var(--dark-bg);
-    border: 2px solid var(--neon-pink);
-    top: 30px;
-    border-radius: 50%;
-    z-index: 1;
-    box-shadow: 0 0 10px var(--neon-pink);
-}
+.left::after, .right::after { content: ''; position: absolute; width: 16px; height: 16px; right: -8px; background: var(--dark-bg); border: 2px solid var(--neon-pink); top: 30px; border-radius: 50%; z-index: 1; box-shadow: 0 0 10px var(--neon-pink); }
 .right::after { left: -8px; }
-
-.timeline-content .date {
-    display: inline-block;
-    color: var(--dark-bg);
-    background-color: var(--neon-pink);
-    font-weight: bold;
-    padding: 2px 10px;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    font-family: var(--font-tech);
-    font-size: 0.8rem;
-}
-
-.timeline-content h3 {
-    color: var(--neon-blue);
-    font-size: 1.4rem;
-    margin-bottom: 5px;
-}
-
-.timeline-content h4 {
-    color: white;
-    font-size: 1.1rem;
-    font-weight: 500;
-    font-family: var(--font-body);
-}
-
-.location-sub {
-    color: var(--text-dim);
-    font-size: 1rem;
-    margin-bottom: 15px;
-    font-weight: normal;
-    font-family: var(--font-body);
-    display: block;
-}
+.timeline-content .date { display: inline-block; color: var(--dark-bg); background-color: var(--neon-pink); font-weight: bold; padding: 2px 10px; border-radius: 4px; margin-bottom: 10px; font-family: var(--font-tech); font-size: 0.8rem; }
+.timeline-content h3 { color: var(--neon-blue); font-size: 1.4rem; margin-bottom: 5px; }
+.timeline-content h4 { color: white; font-size: 1.1rem; font-weight: 500; font-family: var(--font-body); }
+.location-sub { color: var(--text-dim); font-size: 1rem; margin-bottom: 15px; display: block; }
 
 /* =========================================
-   8. SECCIÓN EXPERIENCIA
+   8. EXPERIENCIA & SKILLS
    ========================================= */
-.experience-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
+.experience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.exp-card { text-align: center; }
+.exp-icon { font-size: 2.5rem; color: var(--neon-blue); margin-bottom: 20px; text-shadow: 0 0 15px var(--neon-blue); }
+.date-block { margin: 10px 0 15px; }
+.exp-date { display: block; color: var(--neon-pink); font-family: var(--font-tech); font-size: 0.9rem; font-weight: bold; margin-bottom: 5px; }
 
-.exp-card {
-    text-align: center;
-}
-
-.exp-icon {
-    font-size: 2.5rem;
-    color: var(--neon-blue);
-    margin-bottom: 20px;
-    text-shadow: 0 0 15px var(--neon-blue);
-}
-
-.date-block {
-    margin: 10px 0 15px;
-}
-
-.exp-date {
-    display: block;
-    color: var(--neon-pink);
-    font-family: var(--font-tech);
-    font-size: 0.9rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-/* =========================================
-   9. SECCIÓN HABILIDADES
-   ========================================= */
-.skills-wrapper {
-    display: flex;
-    gap: 50px;
-    flex-wrap: wrap;
-}
-
-.skills-col {
-    flex: 1;
-    min-width: 320px;
-}
-
-.skill-header {
-    color: var(--neon-blue);
-    border-bottom: 1px solid var(--neon-blue);
-    display: inline-block;
-    padding-bottom: 10px;
-    margin-bottom: 25px;
-    font-size: 1.5rem;
-}
-.skill-header i { margin-right: 10px; }
-
+.skills-wrapper { display: flex; gap: 50px; flex-wrap: wrap; }
+.skills-col { flex: 1; min-width: 320px; }
+.skill-header { color: var(--neon-blue); border-bottom: 1px solid var(--neon-blue); display: inline-block; padding-bottom: 10px; margin-bottom: 25px; font-size: 1.5rem; }
 .skill-item { margin-bottom: 20px; }
-.skill-item span {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 600;
-    font-size: 1.1rem;
-}
+.skill-item span { display: block; margin-bottom: 5px; font-weight: 600; font-size: 1.1rem; }
+.bar { height: 8px; background: rgba(255, 255, 255, 0.1); border-radius: 4px; overflow: hidden; }
+.fill { height: 100%; background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink)); box-shadow: 0 0 10px var(--neon-blue); border-radius: 4px; }
 
-.bar {
-    height: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
-    box-shadow: 0 0 10px var(--neon-blue);
-    border-radius: 4px;
-}
-
-.soft-skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.soft-item {
-    text-align: center;
-    padding: 20px;
-}
-.soft-item i {
-    font-size: 2rem;
-    color: var(--neon-pink);
-    margin-bottom: 15px;
-    display: block;
-}
-.soft-item span {
-    font-weight: 600;
-}
+.soft-skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.soft-item { text-align: center; padding: 20px; }
+.soft-item i { font-size: 2rem; color: var(--neon-pink); margin-bottom: 15px; display: block; }
+.soft-item span { font-weight: 600; }
 
 /* =========================================
-   10. SECCIÓN PROYECTOS
+   9. PROYECTOS (TARJETAS)
    ========================================= */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-}
-
-.project-card {
-    padding: 0; /* Override glass-card padding */
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-.project-img-container {
-    height: 200px;
-    overflow: hidden;
-    border-bottom: 1px solid var(--glass-border);
-}
-
-.project-img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.project-card:hover .project-img-container img {
-    transform: scale(1.1);
-}
-
-.card-content {
-    padding: 25px;
-    text-align: center;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.card-content h3 {
-    color: var(--neon-blue);
-    margin-bottom: 10px;
-}
-
-.btn-details {
-    margin-top: 15px;
-    background: transparent;
-    border: 1px solid var(--neon-blue);
-    color: var(--neon-blue);
-    padding: 10px 25px;
-    cursor: pointer;
-    font-family: var(--font-tech);
-    transition: var(--transition);
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    align-self: center;
-}
-
-.btn-details:hover {
-    background: var(--neon-blue);
-    color: black;
-    box-shadow: 0 0 15px var(--neon-blue);
-}
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+.project-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.project-img-container { height: 200px; overflow: hidden; border-bottom: 1px solid var(--glass-border); }
+.project-img-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.project-card:hover .project-img-container img { transform: scale(1.1); }
+.card-content { padding: 25px; text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+.card-content h3 { color: var(--neon-blue); margin-bottom: 10px; }
+.btn-details { margin-top: 15px; background: transparent; border: 1px solid var(--neon-blue); color: var(--neon-blue); padding: 10px 25px; cursor: pointer; font-family: var(--font-tech); transition: var(--transition); text-transform: uppercase; font-size: 0.9rem; align-self: center; }
+.btn-details:hover { background: var(--neon-blue); color: black; box-shadow: 0 0 15px var(--neon-blue); }
 
 /* =========================================
-   11. ESTILOS DE MODALES DETALLADOS (NUEVO)
+   10. MODALES (VENTANAS EMERGENTES)
    ========================================= */
 .project-modal {
     display: none; 
     position: fixed;
-    z-index: 9999;
+    z-index: 9999; /* Muy alto para estar encima de todo */
     left: 0;
     top: 0;
     width: 100%;
@@ -624,11 +387,7 @@ body {
     transition: 0.3s;
     line-height: 20px;
 }
-
-.close-btn:hover {
-    color: var(--neon-pink);
-    text-shadow: 0 0 15px var(--neon-pink);
-}
+.close-btn:hover { color: var(--neon-pink); text-shadow: 0 0 15px var(--neon-pink); }
 
 .modal-title {
     color: var(--neon-blue);
@@ -638,9 +397,9 @@ body {
     border-bottom: 2px solid rgba(0, 243, 255, 0.3);
     padding-bottom: 15px;
     text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
+/* Grid interna del modal */
 .modal-grid {
     display: grid;
     grid-template-columns: 40% 60%;
@@ -696,7 +455,6 @@ body {
     list-style: none;
     padding-left: 0;
 }
-
 .tech-list li {
     position: relative;
     padding-left: 20px;
@@ -704,7 +462,6 @@ body {
     color: #cbd5e1;
     line-height: 1.6;
 }
-
 .tech-list li::before {
     content: '>';
     position: absolute;
@@ -719,140 +476,29 @@ body {
 }
 
 /* =========================================
-   12. CONTACTO (FORMULARIO)
+   11. CONTACTO
    ========================================= */
-.contact-flex {
-    display: flex;
-    gap: 50px;
-    flex-wrap: wrap;
-}
+.contact-flex { display: flex; gap: 50px; flex-wrap: wrap; }
+.contact-details { flex: 1; min-width: 300px; }
+.c-item { margin-bottom: 25px; display: flex; align-items: center; gap: 15px; font-size: 1.1rem; }
+.c-item i { color: var(--neon-blue); font-size: 1.2rem; width: 25px; text-align: center; }
+.socials { margin-top: 30px; display: flex; gap: 20px; }
+.socials a { font-size: 1.8rem; color: white; transition: 0.3s; }
+.socials a:hover { color: var(--neon-pink); text-shadow: 0 0 10px var(--neon-pink); transform: scale(1.1); }
 
-.contact-details {
-    flex: 1;
-    min-width: 300px;
-}
+.c-form { flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 25px; }
+.form-group { position: relative; width: 100%; }
+.form-group input, .form-group textarea { width: 100%; padding: 10px 0; font-size: 1rem; color: white; background: transparent; border: none; border-bottom: 1px solid #555; outline: none; font-family: var(--font-body); resize: vertical; }
+.form-group label { position: absolute; top: 10px; left: 0; font-size: 1rem; color: #888; pointer-events: none; transition: 0.3s ease; }
+.form-group input:focus ~ label, .form-group input:not(:placeholder-shown) ~ label, .form-group textarea:focus ~ label, .form-group textarea:not(:placeholder-shown) ~ label { top: -20px; font-size: 0.8rem; color: var(--neon-blue); }
+.form-group input:focus, .form-group textarea:focus { border-bottom: 1px solid var(--neon-blue); box-shadow: 0 1px 0 0 var(--neon-blue); }
+.btn-neon-submit { margin-top: 10px; background: transparent; border: 1px solid var(--neon-blue); color: var(--neon-blue); padding: 15px; font-weight: bold; cursor: pointer; transition: 0.3s; font-family: var(--font-tech); letter-spacing: 2px; text-transform: uppercase; }
+.btn-neon-submit:hover { background: var(--neon-blue); color: black; box-shadow: 0 0 20px rgba(0, 243, 255, 0.4); }
 
-.c-item {
-    margin-bottom: 25px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 1.1rem;
-}
-.c-item i {
-    color: var(--neon-blue);
-    font-size: 1.2rem;
-    width: 25px;
-    text-align: center;
-}
+/* FOOTER */
+footer { text-align: center; padding: 30px; border-top: 1px solid #333; background-color: black; color: #666; font-family: var(--font-tech); font-size: 0.9rem; margin-top: 50px; }
 
-.socials {
-    margin-top: 30px;
-    display: flex;
-    gap: 20px;
-}
-
-.socials a {
-    font-size: 1.8rem;
-    color: white;
-    transition: 0.3s;
-}
-.socials a:hover {
-    color: var(--neon-pink);
-    text-shadow: 0 0 10px var(--neon-pink);
-    transform: scale(1.1);
-}
-
-/* Formulario con etiquetas flotantes */
-.c-form {
-    flex: 1;
-    min-width: 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.form-group {
-    position: relative;
-    width: 100%;
-}
-
-.form-group input, 
-.form-group textarea {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 1rem;
-    color: white;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #555;
-    outline: none;
-    font-family: var(--font-body);
-    resize: vertical;
-}
-
-.form-group label {
-    position: absolute;
-    top: 10px;
-    left: 0;
-    font-size: 1rem;
-    color: #888;
-    pointer-events: none;
-    transition: 0.3s ease;
-}
-
-.form-group input:focus ~ label,
-.form-group input:not(:placeholder-shown) ~ label,
-.form-group textarea:focus ~ label,
-.form-group textarea:not(:placeholder-shown) ~ label {
-    top: -20px;
-    font-size: 0.8rem;
-    color: var(--neon-blue);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-bottom: 1px solid var(--neon-blue);
-    box-shadow: 0 1px 0 0 var(--neon-blue);
-}
-
-.btn-neon-submit {
-    margin-top: 10px;
-    background: transparent;
-    border: 1px solid var(--neon-blue);
-    color: var(--neon-blue);
-    padding: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-    font-family: var(--font-tech);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.btn-neon-submit:hover {
-    background: var(--neon-blue);
-    color: black;
-    box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
-}
-
-/* =========================================
-   13. FOOTER
-   ========================================= */
-footer {
-    text-align: center;
-    padding: 30px;
-    border-top: 1px solid #333;
-    background-color: black;
-    color: #666;
-    font-family: var(--font-tech);
-    font-size: 0.9rem;
-    margin-top: 50px;
-}
-
-/* =========================================
-   14. RESPONSIVIDAD (MÓVILES Y TABLETS)
-   ========================================= */
+/* RESPONSIVE */
 @media (max-width: 992px) {
     .gradient-text { font-size: 3.5rem; }
     .hero-btns { flex-direction: column; align-items: center; gap: 20px; }
@@ -861,18 +507,16 @@ footer {
 @media (max-width: 768px) {
     .glass-nav { flex-direction: column; gap: 15px; padding: 20px; }
     .glass-nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
-    
     .gradient-text { font-size: 2.5rem; }
     .role-text { font-size: 1.1rem; }
-    
     .timeline::after { left: 20px; }
     .timeline-item { width: 100%; padding-left: 50px; padding-right: 20px; text-align: left; }
     .timeline-item.right { left: 0; }
     .left::after, .right::after { left: 12px; }
-    
     .soft-skills-grid { grid-template-columns: 1fr; }
     .contact-flex { flex-direction: column; }
     
+    /* Responsive Modales */
     .modal-grid { grid-template-columns: 1fr; }
     .modal-content { margin: 10% auto; padding: 20px; }
 }
