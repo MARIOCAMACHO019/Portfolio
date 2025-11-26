@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle Proyecto | Azure</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ajuste específico para la página de detalle */
+        .detail-section { padding-top: 150px; min-height: 100vh; }
+        .detail-container { max-width: 1000px; margin: 0 auto; }
+        .back-btn { display: inline-block; margin-bottom: 30px; color: var(--neon-blue); text-decoration: none; font-family: var(--font-tech); font-size: 1.2rem; transition: 0.3s; }
+        .back-btn:hover { color: var(--neon-pink); transform: translateX(-5px); }
+        .detail-img { width: 100%; border-radius: 15px; border: 2px solid var(--neon-blue); margin-bottom: 30px; box-shadow: 0 0 30px rgba(0, 243, 255, 0.2); }
+        .detail-content h1 { font-size: 3rem; color: white; margin-bottom: 20px; font-family: var(--font-tech); }
+        .detail-content p, .detail-content li { color: #e6f1ff; font-size: 1.1rem; line-height: 1.8; margin-bottom: 15px; }
+        .tech-list { list-style: none; padding: 0; }
+        .tech-list li { padding-left: 20px; position: relative; border-left: 3px solid var(--neon-pink); padding-left: 15px; margin-bottom: 20px; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 0 10px 10px 0; }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="bg-video"><source src="background.mp4" type="video/mp4"></video>
+    <div class="video-overlay"></div>
+    <div class="cursor"></div><div class="cursor-follower"></div>
+
+    <nav class="glass-nav">
+        <div class="logo">MARIO <span>CAMACHO</span></div>
+        <ul>
+            <li><a href="index.html">Volver al Inicio</a></li>
+        </ul>
+    </nav>
+
+    <section class="detail-section">
+        <div class="container detail-container">
+            <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> VOLVER A PROYECTOS</a>
+
+            <div class="glass-card">
+                <h1 class="gradient-text" style="font-size: 2.5rem; text-align: left;">INFRAESTRUCTURA HÍBRIDA AZURE</h1>
+                
+                <img src="azure.png" alt="Detalle Azure" class="detail-img">
+
+                <div class="detail-content">
+                    <h3><i class="fas fa-terminal"></i> Descripción del Proyecto</h3>
+                    <p>En este proyecto, realicé una migración completa de servicios on-premise a la nube de Microsoft Azure. El objetivo era modernizar la infraestructura de una empresa simulada, asegurando alta disponibilidad y reduciendo costes de mantenimiento físico.</p>
+
+                    <h3><i class="fas fa-cogs"></i> Implementación Técnica (Nivel Avanzado)</h3>
+                    <ul class="tech-list">
+                        <li><strong>Redes Virtuales (VNet):</strong> Diseñé una arquitectura Hub-and-Spoke con segmentación de tráfico mediante subredes (Frontend, Backend, GatewaySubnet) y VNet Peering.</li>
+                        <li><strong>Seguridad Perimetral:</strong> Implementación de Network Security Groups (NSG) con reglas de entrada/salida estrictas, permitiendo solo tráfico necesario (puerto 443, 22 para gestión segura).</li>
+                        <li><strong>Conectividad Híbrida:</strong> Despliegue de VPN Gateway (Route-based) estableciendo un túnel IPsec Site-to-Site con la sede local.</li>
+                        <li><strong>Gestión de Identidad:</strong> Configuración de Azure Active Directory (Entra ID) sincronizado con el AD local para Single Sign-On (SSO).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer><p>Mario Camacho Prieto // 2025</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
