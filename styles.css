@@ -101,11 +101,11 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
 .soft-item i { font-size: 2rem; color: var(--neon-pink); margin-bottom: 15px; display: block; }
 .soft-item span { font-weight: 600; }
 
-/* PROYECTOS - AQUÍ ESTÁ EL CAMBIO DE LAS FOTOS */
+/* PROYECTOS */
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
 .project-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
 
-/* FOTO CORREGIDA: Sin huecos negros */
+/* AJUSTE IMÁGENES PROYECTOS PARA EVITAR HUECOS NEGROS */
 .project-img-container { 
     height: 220px; 
     overflow: hidden; 
@@ -114,8 +114,8 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
 .project-img-container img { 
     width: 100%; 
     height: 100%; 
-    object-fit: cover; /* Llena todo el espacio */
-    object-position: top; /* Se enfoca arriba para no cortar títulos */
+    object-fit: cover; /* Llena el espacio sin deformarse ni dejar bordes */
+    object-position: top; /* Se centra arriba para ver los diagramas mejor */
     transition: transform 0.5s ease; 
 }
 .project-card:hover .project-img-container img { transform: scale(1.05); }
@@ -134,7 +134,7 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
     text-transform: uppercase; 
     font-size: 0.9rem; 
     align-self: center;
-    text-decoration: none; /* Importante para el enlace */
+    text-decoration: none; /* Estilo de enlace como botón */
     display: inline-block;
 }
 .btn-details:hover { background: var(--neon-blue); color: black; box-shadow: 0 0 15px var(--neon-blue); }
