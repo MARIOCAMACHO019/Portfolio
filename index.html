@@ -143,40 +143,30 @@
         <div class="container">
             <h2 class="section-title" data-text="PROYECTOS DESTACADOS">PROYECTOS <span>DESTACADOS</span></h2>
             <div class="projects-grid">
-                
                 <div class="project-card glass-card">
-                    <div class="project-img-container">
-                        <img src="azure.png" alt="Proyecto Azure">
-                    </div>
+                    <div class="project-img-container"><img src="azure.png" alt="Proyecto Azure"></div>
                     <div class="card-content">
                         <h3>Infraestructura Azure</h3>
                         <p>Migración y despliegue Cloud.</p>
-                        <a href="index1.html" class="btn-details">VER DETALLES</a>
+                        <button class="btn-details" onclick="openModal('modal-azure')">VER DETALLES</button>
                     </div>
                 </div>
-
                 <div class="project-card glass-card">
-                    <div class="project-img-container">
-                        <img src="active_directory.png" alt="Proyecto AD">
-                    </div>
+                    <div class="project-img-container"><img src="active_directory.png" alt="Proyecto AD"></div>
                     <div class="card-content">
                         <h3>Implementación AD</h3>
                         <p>Windows Server + Active Directory.</p>
-                        <a href="index2.html" class="btn-details">VER DETALLES</a>
+                        <button class="btn-details" onclick="openModal('modal-ad')">VER DETALLES</button>
                     </div>
                 </div>
-
                 <div class="project-card glass-card">
-                    <div class="project-img-container">
-                        <img src="mongo.png" alt="Proyecto BBDD">
-                    </div>
+                    <div class="project-img-container"><img src="mongo.png" alt="Proyecto BBDD"></div>
                     <div class="card-content">
                         <h3>Gestión de BBDD</h3>
                         <p>Administración y Optimización SQL.</p>
-                        <a href="index3.html" class="btn-details">VER DETALLES</a>
+                        <button class="btn-details" onclick="openModal('modal-db')">VER DETALLES</button>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -223,7 +213,7 @@
                     <ul class="tech-list">
                         <li><strong>AD DS:</strong> Dominio con redundancia (DC Primario/Secundario).</li>
                         <li><strong>Servicios:</strong> DNS y DHCP con Failover.</li>
-                        <li><strong>GPO:</strong> Seguridad y despliegue de software.</li>
+                        <li><strong>GPO:</strong> Seguridad y despliegue de software masivo.</li>
                         <li><strong>Automatización:</strong> Scripts de PowerShell para usuarios.</li>
                     </ul>
                 </div>
@@ -265,11 +255,21 @@
                         <div class="c-item"><i class="fas fa-envelope"></i> mario.camacho.prieto019@gmail.com</div>
                         <div class="c-item"><i class="fas fa-phone"></i> +34 667 96 30 08</div>
                         <div class="c-item"><i class="fas fa-map-marker-alt"></i> Madrid, España</div>
+                        
                         <div class="socials">
                             <a href="https://www.linkedin.com/in/mario-camacho-prieto-117021368" target="_blank"><i class="fab fa-linkedin"></i></a>
                             <a href="https://github.com/MARIOCAMACHO019" target="_blank"><i class="fab fa-github"></i></a>
                             <a href="https://www.instagram.com/camacho_019/" target="_blank"><i class="fab fa-instagram"></i></a>
                         </div>
+
+                        <div class="cv-download-area" style="margin-top: 40px;">
+                            <h4 style="color: var(--neon-blue); margin-bottom: 15px; font-family: var(--font-tech);">DOCUMENTACIÓN</h4>
+                            <a href="cv_mario.pdf" download class="btn-neon" style="font-size: 0.9rem;">
+                                <span></span><span></span><span></span><span></span>
+                                <i class="fas fa-file-pdf"></i> DESCARGAR CV
+                            </a>
+                        </div>
+
                     </div>
                     <form class="c-form">
                         <div class="form-group">
